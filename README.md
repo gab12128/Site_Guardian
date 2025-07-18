@@ -5,12 +5,7 @@ Este é um site desenvolvido para o projeto **Guardiões das Águas**, com o obj
 🔗 **Acesse o site aqui**:  
 👉 [https://gab12128.github.io/Site_Guardian/](https://gab12128.github.io/Site_Guardian/)
 
----
-
-## 📸 Preview do site
-
-![Preview do site](https://gab12128.github.io/Site_Guardian/imagens/preview.png)
-
+ 
 ---
 
 ## 🚀 Tecnologias utilizadas
@@ -19,5 +14,4 @@ Este é um site desenvolvido para o projeto **Guardiões das Águas**, com o obj
 - CSS3
 - JavaScript
 - GitHub Pages
-
 
