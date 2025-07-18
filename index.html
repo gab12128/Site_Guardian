@@ -1,0 +1,935 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guardiãs das Águas - PureDrop</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Tela de Carregamento Inicial -->
+    <div class="initial-loading-screen" id="initialLoading">
+        <div class="loading-container">
+            <div class="loading-logo">
+                <i class="fas fa-tint"></i>
+                <span data-translate="loading-title">Guardiãs das Águas</span>
+            </div>
+            <div class="loading-drop-animation">
+                <div class="main-drop"></div>
+                <div class="sparkle sparkle-1">✨</div>
+                <div class="sparkle sparkle-2">💧</div>
+                <div class="sparkle sparkle-3">🌟</div>
+            </div>
+            <div class="loading-text">
+                <span data-translate="initial-loading-text">Preparando sua jornada pelas águas...</span>
+            </div>
+            <div class="loading-progress">
+                <div class="progress-bar">
+                    <div class="progress-fill"></div>
+                </div>
+                <div class="progress-percentage">0%</div>
+            </div>
+        </div>
+    </div>
+    <!-- Enhanced Animated water background -->
+    <div class="water-background"></div>
+    
+    <!-- Navigation Menu -->
+    <nav class="nav-menu" id="navMenu">
+        <div class="nav-header">
+            <div class="nav-logo">
+                <i class="fas fa-tint"></i>
+                <span>Guardiãs das Águas</span>
+            </div>
+            <button class="nav-toggle" id="navToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#home" class="nav-link active"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="#about" class="nav-link"><i class="fas fa-info-circle"></i> Sobre o Projeto</a></li>
+            <li><a href="#why-game" class="nav-link"><i class="fas fa-question-circle"></i> Por Que Nosso Jogo?</a></li>
+            <li><a href="#pure-drop" class="nav-link"><i class="fas fa-gamepad"></i> PureDrop</a></li>
+            <li><a href="#gallery" class="nav-link"><i class="fas fa-images"></i> Galeria</a></li>
+            <li><a href="#news" class="nav-link"><i class="fas fa-newspaper"></i> Notícias</a></li>
+            <li><a href="#contact" class="nav-link"><i class="fas fa-envelope"></i> Contato</a></li>
+        </ul>
+        
+        <!-- Enhanced Controls -->
+        <div class="nav-controls">
+            <button class="theme-toggle" id="themeToggle">
+                <i class="fas fa-moon"></i>
+                <span data-translate="theme-toggle">Modo Escuro</span>
+            </button>
+            <div class="language-selector">
+                <button class="lang-btn active" data-lang="pt">PT</button>
+                <button class="lang-btn" data-lang="en">EN</button>
+                <button class="lang-btn" data-lang="es">ES</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Enhanced Home Section -->
+        <section id="home" class="section home-section">
+            <div class="container">
+                <div class="hero-content">
+                    <!-- Image Container -->
+                    <div class="hero-image-container">
+                        <div class="hero-image-wrapper">
+                            <img id="heroImage" src="img/Gemini_Generated_Image_klggnzklggnzklgg.jpg" alt="Guardiãs das Águas" class="hero-image">
+                        </div>
+                    </div>
+                    
+                    <div class="hero-text">
+                        <h1 class="pixel-title" data-translate="hero-title">Guardiãs das Águas</h1>
+                        <p class="hero-subtitle" data-translate="hero-subtitle">
+                            Projeto educacional gamificado que empodera jovens para proteger nossos recursos hídricos através da aventura e aprendizado interativo
+                        </p>
+                        <div class="hero-buttons">
+                            <button class="btn btn-primary play-btn" id="playBtn">
+                                <i class="fas fa-play"></i>
+                                <span data-translate="play-button">Jogar PureDrop</span>
+                            </button>
+                            <button class="btn btn-secondary learn-btn" onclick="document.getElementById('about').scrollIntoView({behavior: 'smooth'})">
+                                <i class="fas fa-book"></i>
+                                <span data-translate="learn-button">Saiba Mais</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Enhanced About Section -->
+        <section id="about" class="section">
+            <div class="container">
+                <h2 class="section-title" data-translate="about-title">Sobre o Projeto Guardiãs das Águas</h2>
+                
+                <div class="about-grid">
+                    <div class="about-card">
+                        <div class="card-icon">
+                            <i class="fas fa-bullseye"></i>
+                        </div>
+                        <h3 data-translate="mission-title">Missão</h3>
+                        <p data-translate="mission-text">Educar e conscientizar jovens sobre a importância da conservação dos recursos hídricos através de metodologias inovadoras e gamificação interativa.</p>
+                    </div>
+                    
+                    <div class="about-card">
+                        <div class="card-icon">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                        <h3 data-translate="vision-title">Visão</h3>
+                        <p data-translate="vision-text">Formar uma geração de guardiãs conscientes e ativas na proteção dos recursos hídricos do Brasil, criando impacto real e duradouro.</p>
+                    </div>
+                    
+                    <div class="about-card">
+                        <div class="card-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h3 data-translate="values-title">Valores</h3>
+                        <p data-translate="values-text">Protagonismo feminino, educação transformadora, sustentabilidade, inovação tecnológica e impacto social positivo.</p>
+                    </div>
+                </div>
+
+                <div class="regions-map">
+                    <h3 data-translate="regions-title">Regiões Atendidas pelo Projeto</h3>
+                    <div class="regions-grid">
+                        <div class="region-card">
+                            <h4>Juazeiro do Norte/CE</h4>
+                            <p>Região Nordeste</p>
+                        </div>
+                        <div class="region-card">
+                            <h4>Aracaju/SE</h4>
+                            <p>Região Nordeste</p>
+                        </div>
+                        <div class="region-card">
+                            <h4>Cuiabá/MT</h4>
+                            <p>Região Centro-Oeste</p>
+                        </div>
+                        <div class="region-card">
+                            <h4>Rio Grande/RS</h4>
+                            <p>Região Sul</p>
+                        </div>
+                        <div class="region-card">
+                            <h4>Uberaba/MG</h4>
+                            <p>Região Sudeste</p>
+                        </div>
+                        <div class="region-card">
+                            <h4>Uberlândia/MG</h4>
+                            <p>Região Sudeste</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Enhanced Why Our Game Section -->
+        <section id="why-game" class="section">
+            <div class="container">
+                <h2 class="section-title" data-translate="why-game-title">Por Que Nosso Jogo Faz a Diferença?</h2>
+                
+                <div class="game-importance-grid">
+                    <div class="importance-card">
+                        <div class="card-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3 data-translate="engagement-title">Engajamento Ativo</h3>
+                        <p data-translate="engagement-text">O jogo promove participação ativa e interesse genuíno dos jovens em questões ambientais, transformando aprendizado em aventura.</p>
+                    </div>
+                    
+                    <div class="importance-card">
+                        <div class="card-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h3 data-translate="learning-title">Aprendizado Significativo</h3>
+                        <p data-translate="learning-text">Conceitos são absorvidos de forma prática e memorável através da experiência interativa e resolução de problemas reais.</p>
+                    </div>
+                    
+                    <div class="importance-card">
+                        <div class="card-icon">
+                            <i class="fas fa-female"></i>
+                        </div>
+                        <h3 data-translate="empowerment-title">Protagonismo Feminino</h3>
+                        <p data-translate="empowerment-text">O jogo fortalece o papel das jovens como líderes na preservação ambiental, incentivando sua participação ativa.</p>
+                    </div>
+                    
+                    <div class="importance-card">
+                        <div class="card-icon">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <h3 data-translate="impact-title">Impacto Real</h3>
+                        <p data-translate="impact-text">Conecta o aprendizado virtual com ações concretas de transformação social e ambiental na comunidade.</p>
+                    </div>
+                </div>
+
+                <div class="methodology-cycle">
+                    <h3 data-translate="methodology-title">Metodologia Educacional Gamificada</h3>
+                    <div class="cycle-container">
+                        <div class="cycle-step">
+                            <div class="step-number">1</div>
+                            <h4 data-translate="step-play">Jogar</h4>
+                            <p>Experimentar</p>
+                        </div>
+                        <div class="cycle-arrow">→</div>
+                        <div class="cycle-step">
+                            <div class="step-number">2</div>
+                            <h4 data-translate="step-learn">Aprender</h4>
+                            <p>Compreender</p>
+                        </div>
+                        <div class="cycle-arrow">→</div>
+                        <div class="cycle-step">
+                            <div class="step-number">3</div>
+                            <h4 data-translate="step-apply">Aplicar</h4>
+                            <p>Praticar</p>
+                        </div>
+                        <div class="cycle-arrow">→</div>
+                        <div class="cycle-step">
+                            <div class="step-number">4</div>
+                            <h4 data-translate="step-transform">Transformar</h4>
+                            <p>Impactar</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Enhanced PureDrop Game Section -->
+        <section id="pure-drop" class="section">
+            <div class="container">
+                <h2 class="section-title" data-translate="puredrop-title">PureDrop: O Desafio da Gota Salva-Vidas</h2>
+                
+                <!-- Elemento Visual Temático da Pureza -->
+                <div class="purity-visual-element">
+                    <div class="pure-gota-main">
+                        <div class="main-gota"></div>
+                        <div class="purity-ripples">
+                            <div class="ripple ripple-1"></div>
+                            <div class="ripple ripple-2"></div>
+                            <div class="ripple ripple-3"></div>
+                        </div>
+                        <div class="floating-particles">
+                            <div class="particle particle-1">💧</div>
+                            <div class="particle particle-2">✨</div>
+                            <div class="particle particle-3">🌟</div>
+                            <div class="particle particle-4">💎</div>
+                        </div>
+                    </div>
+                    <div class="purity-text">
+                        <h3 data-translate="purity-element-title">A Essência da Pureza</h3>
+                        <p data-translate="purity-element-description">Cada gota representa a esperança de um futuro mais limpo e sustentável</p>
+                    </div>
+                </div>
+
+                <!-- Área de Jogo Web Integrada -->
+                <div class="web-game-area">
+                    <div class="game-container">
+                        <div class="game-header">
+                            <h3 data-translate="web-game-title">Jogue PureDrop Agora!</h3>
+                            <p data-translate="web-game-subtitle">Aventura diretamente no seu navegador</p>
+                        </div>
+                        <div class="game-frame" id="gameFrame">
+                            <div class="game-placeholder">
+                                <div class="game-loading" id="gameLoading">
+                                    <div class="game-loading-drop"></div>
+                                    <div class="game-loading-text">
+                                        <span data-translate="game-loading-text">Carregando PureDrop...</span>
+                                    </div>
+                                </div>
+                                <div class="game-ready" id="gameReady" style="display: none;">
+                                    <i class="fas fa-play-circle"></i>
+                                    <span data-translate="game-ready-text">Clique para Jogar</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="game-controls">
+                            <button class="btn btn-primary game-start-btn" id="gameStartBtn">
+                                <i class="fas fa-gamepad"></i>
+                                <span data-translate="start-game">Iniciar Jogo</span>
+                            </button>
+                            <button class="btn btn-secondary game-fullscreen-btn" id="gameFullscreenBtn">
+                                <i class="fas fa-expand"></i>
+                                <span data-translate="fullscreen">Tela Cheia</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="game-overview">
+                    <div class="game-info">
+                        <h3 data-translate="game-overview-title">Especificações do Jogo</h3>
+                        <ul class="game-details">
+                            <li><strong>🎮 <span data-translate="platforms">Plataformas</span>:</strong> <span data-translate="platforms-list">PC (Windows/Mac/Linux), Android</span></li>
+                            <li><strong>🎯 <span data-translate="genre">Gênero</span>:</strong> <span data-translate="genre-description">Educacional, Aventura, Quebra-Cabeça Ambiental</span></li>
+                            <li><strong>👥 <span data-translate="target-audience">Público-Alvo</span>:</strong> <span data-translate="audience-description">Jovens (12-18 anos) e Educadores</span></li>
+                            <li><strong>🎲 <span data-translate="game-mode">Modo de Jogo</span>:</strong> <span data-translate="mode-description">Single Player, Offline</span></li>
+                            <li><strong>⏱️ <span data-translate="duration">Duração</span>:</strong> <span data-translate="session-time">15-30 minutos por sessão</span></li>
+                            <li><strong>🌍 <span data-translate="languages">Idiomas</span>:</strong> <span data-translate="supported-languages">Português, Inglês, Espanhol</span></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="game-character">
+                        <h3 data-translate="character-title">Estados da Gota Guardiã</h3>
+                        <div class="character-states">
+                            <div class="character-state pure">
+                                <div class="state-drop pure-drop"></div>
+                                <span data-translate="pure-state">Gota Pura</span>
+                                <small data-translate="pure-state-desc">Estado Ideal</small>
+                            </div>
+                            <div class="character-state turbid">
+                                <div class="state-drop turbid-drop"></div>
+                                <span data-translate="turbid-state">Gota Turva</span>
+                                <small data-translate="turbid-state-desc">Parcialmente Poluída</small>
+                            </div>
+                            <div class="character-state polluted">
+                                <div class="state-drop polluted-drop"></div>
+                                <span data-translate="polluted-state">Gota Poluída</span>
+                                <small data-translate="polluted-state-desc">Requer Purificação</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="game-scenarios">
+                    <h3 data-translate="scenarios-title">Cenários de Aventura</h3>
+                    <div class="scenarios-grid">
+                        <div class="scenario-card">
+                            <div class="scenario-icon city">
+                                <i class="fas fa-city"></i>
+                            </div>
+                            <h4 data-translate="city-scenario">Cidade Poluída</h4>
+                            <p>Combata a poluição urbana e o desperdício nas grandes cidades</p>
+                        </div>
+                        <div class="scenario-card">
+                            <div class="scenario-icon rural">
+                                <i class="fas fa-tree"></i>
+                            </div>
+                            <h4 data-translate="rural-scenario">Área Rural</h4>
+                            <p>Proteja nascentes e preserve a água na zona rural</p>
+                        </div>
+                        <div class="scenario-card">
+                            <div class="scenario-icon river">
+                                <i class="fas fa-water"></i>
+                            </div>
+                            <h4 data-translate="river-scenario">Rio com Lixo</h4>
+                            <p>Limpe rios e córregos contaminados por resíduos</p>
+                        </div>
+                        <div class="scenario-card">
+                            <div class="scenario-icon home">
+                                <i class="fas fa-home"></i>
+                            </div>
+                            <h4 data-translate="home-scenario">Casa/Escola</h4>
+                            <p>Conscientize sobre uso responsável da água no dia a dia</p>
+                        </div>
+                        <div class="scenario-card">
+                            <div class="scenario-icon industry">
+                                <i class="fas fa-industry"></i>
+                            </div>
+                            <h4 data-translate="industry-scenario">Indústrias</h4>
+                            <p>Desafie práticas industriais poluidoras e promova sustentabilidade</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Seção: PureDrop: Desafios e Vitórias -->
+                <div class="detailed-game-section">
+                    <h3 data-translate="game-challenges-title">PureDrop: Desafios e Vitórias</h3>
+                    <div class="game-moments-grid">
+                        <div class="game-moment-card">
+                            <div class="moment-image">
+                                <img src="img/Gemini_Generated_Image_dmkg9idmkg9idmkg.jpeg" alt="Menu Principal">
+                            </div>
+                            <div class="moment-content">
+                                <h4 data-translate="menu-title">Preparando a Missão: O Menu de PureDrop</h4>
+                                <p data-translate="menu-description">Aqui começa sua aventura pela água limpa! Navegue pelo nosso menu intuitivo e dê o primeiro passo para guiar a Gota Salva-Vidas em sua importante jornada de purificação.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="game-moment-card">
+                            <div class="moment-image">
+                                <img src="img/Gemini_Generated_Image_nhahb4nhahb4nhah.jpeg" alt="Gameplay">
+                            </div>
+                            <div class="moment-content">
+                                <h4 data-translate="gameplay-title">A Gota em Ação: Navegando pelos Desafios</h4>
+                                <p data-translate="gameplay-description">Mergulhe na dinâmica do jogo! Testemunhe a PureDrop deslizando por mares poluídos, utilizando suas ferramentas para desviar de obstáculos e coletar a essência da pureza. Cada movimento é crucial para o sucesso da missão!</p>
+                            </div>
+                        </div>
+                        
+                        <div class="game-moment-card">
+                            <div class="moment-image">
+                                <img src="img/Gemini_Generated_Image_8gk7kc8gk7kc8gk7.jpeg" alt="Game Over">
+                            </div>
+                            <div class="moment-content">
+                                <h4 data-translate="gameover-title">Missão Incompleta: Tente Novamente!</h4>
+                                <p data-translate="gameover-description">Nem todas as tentativas são perfeitas. Se a PureDrop não alcançar seu objetivo desta vez, esta tela aparecerá. Mas não desanime! Cada desafio é uma nova chance de fazer a diferença e proteger a água.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="game-moment-card">
+                            <div class="moment-image">
+                                <img src="img/Gemini_Generated_Image_kqo2odkqo2odkqo2.jpeg" alt="Vitória">
+                            </div>
+                            <div class="moment-content">
+                                <h4 data-translate="victory-title">Vitória Celebrada: Pureza Restaurada!</h4>
+                                <p data-translate="victory-description">O momento da recompensa pelo seu esforço! Ao superar os desafios e restaurar a pureza da água, a PureDrop se enche de alegria. Sua dedicação garantiu um futuro mais limpo e brilhante.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Seção: Cenários da Gota -->
+                <div class="detailed-scenarios-section">
+                    <h3 data-translate="scenarios-worlds-title">Cenários da Gota: Os Mundos a Serem Salvos</h3>
+                    <div class="scenarios-detail-grid">
+                        <div class="scenario-detail-card">
+                            <div class="scenario-image">
+                                <img src="img/Gemini_Generated_Image_jd63l3jd63l3jd63.jpeg" alt="Cidade Poluída">
+                            </div>
+                            <div class="scenario-content">
+                                <h4 data-translate="city-scenario-title">Cenário Urbano: Os Desafios da Cidade</h4>
+                                <p data-translate="city-scenario-description">Explore a cidade onde a poluição se espalha. A PureDrop precisa de você para atravessar rios contaminados por esgotos e resíduos urbanos, destacando o impacto da nossa vida diária na qualidade da água.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="scenario-detail-card">
+                            <div class="scenario-image">
+                                <img src="img/Gemini_Generated_Image_zgsda2zgsda2zgsd.jpeg" alt="Área Rural">
+                            </div>
+                            <div class="scenario-content">
+                                <h4 data-translate="rural-scenario-title">Campo e Contaminação: Ameaças no Rural</h4>
+                                <p data-translate="rural-scenario-description">Descubra como a PureDrop enfrenta fazendas com agrotóxicos e descarte inadequado de lixos nos rios. Este cenário ilustra os perigos da contaminação agrícola para nossos preciosos recursos hídricos.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="scenario-detail-card">
+                            <div class="scenario-image">
+                                <img src="img/Gemini_Generated_Image_ufgbrsufgbrsufgb.jpg" alt="Escola Poluída">
+                            </div>
+                            <div class="scenario-content">
+                                <h4 data-translate="school-scenario-title">Escola Poluída: Aprendendo sobre o Impacto</h4>
+                                <p data-translate="school-scenario-description">Um ambiente escolar afetado pela poluição. A PureDrop precisa mostrar a importância da conscientização ambiental desde cedo, transformando um ambiente degradado em um local de aprendizado sobre sustentabilidade e cuidado com a água.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="scenario-detail-card">
+                            <div class="scenario-image">
+                                <img src="img/Gemini_Generated_Image_e32tc0e32tc0e32t.jpg" alt="Indústria Poluída">
+                            </div>
+                            <div class="scenario-content">
+                                <h4 data-translate="industry-scenario-title">Indústria Poluída: O Desafio dos Resíduos</h4>
+                                <p data-translate="industry-scenario-description">Um ambiente industrial que libera resíduos tóxicos nas águas. A PureDrop enfrenta este cenário para ressaltar a necessidade de práticas industriais mais responsáveis e sustentáveis, protegendo nossos recursos hídricos de danos maiores.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="scenario-detail-card">
+                            <div class="scenario-image">
+                                <img src="img/Gemini_Generated_Image_negssxnegssxnegs.jpg" alt="Rio Poluído">
+                            </div>
+                            <div class="scenario-content">
+                                <h4 data-translate="river-scenario-title">Rio Poluído: O Caminho da Limpeza</h4>
+                                <p data-translate="river-scenario-description">Um rio que sofre com o descarte inadequado de lixo e poluição. Este cenário enfatiza o impacto direto das nossas ações na vida aquática e a urgência de restaurar a saúde e a beleza dos nossos rios.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Seção: Arsenal da Pureza -->
+                <div class="tools-arsenal-section">
+                    <h3 data-translate="tools-arsenal-title">Arsenal da Pureza: As Ferramentas da Gota</h3>
+                    <div class="tools-arsenal-grid">
+                        <div class="tool-arsenal-card">
+                            <div class="tool-image">
+                                <img src="img/Gemini_Generated_Image_i5mcnwi5mcnwi5mc.jpeg" alt="Rede de Coleta">
+                            </div>
+                            <div class="tool-content">
+                                <h4 data-translate="net-arsenal-title">Rede de Coleta: Limpando os Caminhos</h4>
+                                <p data-translate="net-arsenal-description">Uma ferramenta essencial para a PureDrop! Use a rede para coletar resíduos sólidos e plásticos, limpando o caminho e restaurando a qualidade da água nos rios e oceanos.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="tool-arsenal-card">
+                            <div class="tool-image">
+                                <img src="img/Gemini_Generated_Image_ljwaj6ljwaj6ljwa.jpeg" alt="Filtro Mágico">
+                            </div>
+                            <div class="tool-content">
+                                <h4 data-translate="filter-arsenal-title">Filtro Mágico: O Poder da Purificação</h4>
+                                <p data-translate="filter-arsenal-description">O segredo para águas cristalinas! O filtro mágico remove impurezas e toxinas, transformando a água poluída em pura e segura para todos.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="tool-arsenal-card">
+                            <div class="tool-image">
+                                <img src="img/Gemini_Generated_Image_wxmj5uwxmj5uwxmj.jpeg" alt="Válvula Inteligente">
+                            </div>
+                            <div class="tool-content">
+                                <h4 data-translate="valve-arsenal-title">Válvula Inteligente: Regulando o Fluxo</h4>
+                                <p data-translate="valve-arsenal-description">Controle o fluxo de água com precisão! A válvula inteligente permite que a PureDrop direcione correntes e evite áreas de alta contaminação, otimizando sua rota para a limpeza.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="tool-arsenal-card">
+                            <div class="tool-image">
+                                <img src="img/Gemini_Generated_Image_sgl8v4sgl8v4sgl8.jpeg" alt="Árvore Protetora">
+                            </div>
+                            <div class="tool-content">
+                                <h4 data-translate="tree-arsenal-title">Árvore Protetora: Guardiã da Natureza</h4>
+                                <p data-translate="tree-arsenal-description">A força da natureza ao seu lado! A árvore protetora simboliza a importância do reflorestamento e da vegetação ciliar na preservação dos rios, nascentes e ecossistemas aquáticos.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="tool-arsenal-card">
+                            <div class="tool-image">
+                                <img src="img/Gemini_Generated_Image_px094vpx094vpx09.jpeg" alt="Campanha de Conscientização">
+                            </div>
+                            <div class="tool-content">
+                                <h4 data-translate="campaign-arsenal-title">Campanha de Conscientização: Educando para o Futuro</h4>
+                                <p data-translate="campaign-arsenal-description">Além de limpar, é preciso educar! Esta ferramenta representa as ações de conscientização, inspirando comunidades a adotar práticas sustentáveis e a se engajar ativamente na proteção da água.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Enhanced Gallery Section -->
+        <section id="gallery" class="section">
+            <div class="container">
+                <h2 class="section-title" data-translate="gallery-title">Galeria e Recursos Educacionais</h2>
+                
+                <div class="gallery-tabs">
+                    <button class="tab-btn active" data-tab="game-images">
+                        <i class="fas fa-gamepad"></i>
+                        <span data-translate="game-images-tab">Imagens do Jogo</span>
+                    </button>
+                    <button class="tab-btn" data-tab="project-videos">
+                        <i class="fas fa-video"></i>
+                        <span data-translate="project-videos-tab">Vídeos do Projeto</span>
+                    </button>
+                    <button class="tab-btn" data-tab="project-photos">
+                        <i class="fas fa-camera"></i>
+                        <span data-translate="project-photos-tab">Fotos das Ações</span>
+                    </button>
+                    <button class="tab-btn" data-tab="documents">
+                        <i class="fas fa-file-pdf"></i>
+                        <span data-translate="documents-tab">Materiais Educativos</span>
+                    </button>
+                </div>
+
+                <div class="gallery-content">
+                    <div class="tab-content active" id="game-images">
+                        <div class="gallery-grid">
+                            <div class="gallery-item">
+                                <div class="gallery-image-container">
+                                    <img src="" alt="Menu Principal do PureDrop">
+                                </div>
+                                <div class="gallery-item-info">
+                                    <h4 class="gallery-item-title">Menu Principal do PureDrop</h4>
+                                    <p class="gallery-item-description">Interface principal do jogo com personagem da Gota Guardiã e opções de navegação.</p>
+                                </div>
+                            </div>
+                            <div class="gallery-item">
+                                <div class="gallery-image-container">
+                                    <img src="" alt="Gameplay - Cidade Poluída">
+                                </div>
+                                <div class="gallery-item-info">
+                                    <h4 class="gallery-item-title">Gameplay - Cidade Poluída</h4>
+                                    <p class="gallery-item-description">Cenário urbano onde a Gota Guardiã deve combater a poluição e proteger os recursos hídricos.</p>
+                                </div>
+                            </div>
+                            <div class="gallery-item">
+                                <div class="gallery-image-container">
+                                    <img src="attached_assets/Gemini_Generated_Image_e4ureje4ureje4ur_1752774532719.jpeg" alt="Ferramentas do Guardião">
+                                </div>
+                                <div class="gallery-item-info">
+                                    <h4 class="gallery-item-title">Ferramentas do Guardião</h4>
+                                    <p class="gallery-item-description">Arsenal completo com filtros mágicos, redes de coleta e outros equipamentos de purificação.</p>
+                                </div>
+                            </div>
+                            <div class="gallery-item">
+                                <div class="gallery-image-container">
+                                    <img src="attached_assets/Gemini_Generated_Image_i5mcnwi5mcnwi5mc_1752774532720.jpeg" alt="Sistema de Progressão">
+                                </div>
+                                <div class="gallery-item-info">
+                                    <h4 class="gallery-item-title">Sistema de Progressão</h4>
+                                    <p class="gallery-item-description">Interface de evolução da Gota Guardiã com níveis, conquistas e habilidades desbloqueadas.</p>
+                                </div>
+                            </div>
+                            <div class="gallery-item">
+                                <div class="gallery-image-container">
+                                    <img src="attached_assets/Gemini_Generated_Image_kqo2odkqo2odkqo2_1752774532720.jpeg" alt="Aventura Aquática">
+                                </div>
+                                <div class="gallery-item-info">
+                                    <h4 class="gallery-item-title">Aventura Aquática</h4>
+                                    <p class="gallery-item-description">Exploração de ambientes subaquáticos em busca de nascentes puras e limpeza de poluentes.</p>
+                                </div>
+                            </div>
+                            <div class="gallery-item">
+                                <div class="gallery-image-container">
+                                    <img src="attached_assets/Gemini_Generated_Image_ljwaj6ljwaj6ljwa_1752774532720.jpeg" alt="Missões Educativas">
+                                </div>
+                                <div class="gallery-item-info">
+                                    <h4 class="gallery-item-title">Missões Educativas</h4>
+                                    <p class="gallery-item-description">Desafios interativos que ensinam sobre conservação da água de forma lúdica e envolvente.</p>
+                                </div>
+                            </div>
+                            <div class="gallery-item">
+                                <div class="gallery-image-container">
+                                    <img src="attached_assets/Gemini_Generated_Image_nhahb4nhahb4nhah_1752774532720.jpeg" alt="Mundo Colorido">
+                                </div>
+                                <div class="gallery-item-info">
+                                    <h4 class="gallery-item-title">Mundo Colorido</h4>
+                                    <p class="gallery-item-description">Ambientes vibrantes e cheios de vida representando ecossistemas aquáticos saudáveis.</p>
+                                </div>
+                            </div>
+                            <div class="gallery-item">
+                                <div class="gallery-image-container">
+                                    <img src="attached_assets/Gemini_Generated_Image_px094vpx094vpx09_1752774532721.jpeg" alt="Desafios Ambientais">
+                                </div>
+                                <div class="gallery-item-info">
+                                    <h4 class="gallery-item-title">Desafios Ambientais</h4>
+                                    <p class="gallery-item-description">Quebra-cabeças complexos que simulam problemas reais de poluição e soluções sustentáveis.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-content" id="project-videos">
+                        <div class="video-grid">
+                            <div class="video-animated-placeholder">
+                                <div class="video-thumbnail">
+                                    <div class="play-animation">
+                                        <div class="play-circle">
+                                            <i class="fas fa-play"></i>
+                                        </div>
+                                        <div class="play-ripples">
+                                            <div class="ripple"></div>
+                                            <div class="ripple"></div>
+                                            <div class="ripple"></div>
+                                        </div>
+                                    </div>
+                                    <div class="video-overlay">
+                                        <div class="video-duration">3:45</div>
+                                        <div class="video-quality">HD</div>
+                                    </div>
+                                </div>
+                                <div class="video-info">
+                                    <h4 data-translate="trailer-title">Trailer Oficial do PureDrop</h4>
+                                    <p data-translate="trailer-description">Conheça a aventura épica da Gota Salva-Vidas</p>
+                                </div>
+                            </div>
+                            
+                            <div class="video-animated-placeholder">
+                                <div class="video-thumbnail">
+                                    <div class="play-animation">
+                                        <div class="play-circle">
+                                            <i class="fas fa-play"></i>
+                                        </div>
+                                        <div class="play-ripples">
+                                            <div class="ripple"></div>
+                                            <div class="ripple"></div>
+                                            <div class="ripple"></div>
+                                        </div>
+                                    </div>
+                                    <div class="video-overlay">
+                                        <div class="video-duration">5:20</div>
+                                        <div class="video-quality">HD</div>
+                                    </div>
+                                </div>
+                                <div class="video-info">
+                                    <h4 data-translate="testimonials-title">Depoimentos das Guardiãs</h4>
+                                    <p data-translate="testimonials-description">Histórias reais de impacto e transformação</p>
+                                </div>
+                            </div>
+                            
+                            <div class="video-animated-placeholder">
+                                <div class="video-thumbnail">
+                                    <div class="play-animation">
+                                        <div class="play-circle">
+                                            <i class="fas fa-play"></i>
+                                        </div>
+                                        <div class="play-ripples">
+                                            <div class="ripple"></div>
+                                            <div class="ripple"></div>
+                                            <div class="ripple"></div>
+                                        </div>
+                                    </div>
+                                    <div class="video-overlay">
+                                        <div class="video-duration">7:15</div>
+                                        <div class="video-quality">4K</div>
+                                    </div>
+                                </div>
+                                <div class="video-info">
+                                    <h4 data-translate="making-of-title">Making of: Criando o PureDrop</h4>
+                                    <p data-translate="making-of-description">Bastidores do desenvolvimento do jogo</p>
+                                </div>
+                            </div>
+                            
+                            <div class="video-animated-placeholder">
+                                <div class="video-thumbnail">
+                                    <div class="play-animation">
+                                        <div class="play-circle">
+                                            <i class="fas fa-play"></i>
+                                        </div>
+                                        <div class="play-ripples">
+                                            <div class="ripple"></div>
+                                            <div class="ripple"></div>
+                                            <div class="ripple"></div>
+                                        </div>
+                                    </div>
+                                    <div class="video-overlay">
+                                        <div class="video-duration">4:30</div>
+                                        <div class="video-quality">HD</div>
+                                    </div>
+                                </div>
+                                <div class="video-info">
+                                    <h4 data-translate="gameplay-video-title">Gameplay Completo</h4>
+                                    <p data-translate="gameplay-video-description">Demonstração completa de uma missão</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-content" id="project-photos">
+                        <div class="gallery-grid">
+                            <div class="gallery-item">
+                                <div class="gallery-image-container">
+                                    <img src="" alt="Workshop em Juazeiro/CE">
+                                </div>
+                                <div class="gallery-item-info">
+                                    <h4 class="gallery-item-title">Workshop em Juazeiro/CE</h4>
+                                    <p class="gallery-item-description">Jovens guardiãs participando de oficinas educativas sobre conservação da água no Nordeste brasileiro.</p>
+                                </div>
+                            </div>
+                            <div class="gallery-item">
+                                <div class="gallery-image-container">
+                                    <img src="" alt="Ação em Aracaju/SE">
+                                </div>
+                                <div class="gallery-item-info">
+                                    <h4 class="gallery-item-title">Ação em Aracaju/SE</h4>
+                                    <p class="gallery-item-description">Atividades práticas de limpeza e conscientização em recursos hídricos costeiros de Sergipe.</p>
+                                </div>
+                            </div>
+                            <div class="gallery-item">
+                                <div class="gallery-image-container">
+                                    <img src="" alt="Evento em Cuiabá/MT">
+                                </div>
+                                <div class="gallery-item-info">
+                                    <h4 class="gallery-item-title">Evento em Cuiabá/MT</h4>
+                                    <p class="gallery-item-description">Grande festival de conscientização ambiental no Centro-Oeste com foco no Pantanal.</p>
+                                </div>
+                            </div>
+                            <div class="gallery-item">
+                                <div class="gallery-image-container">
+                                    <img src="attached_assets/Gemini_Generated_Image_zgsda2zgsda2zgsd_1752774532721.jpeg" alt="Capacitação Educacional">
+                                </div>
+                                <div class="gallery-item-info">
+                                    <h4 class="gallery-item-title">Capacitação Educacional</h4>
+                                    <p class="gallery-item-description">Formação de educadores para multiplicar o conhecimento sobre proteção dos recursos hídricos.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-content" id="documents">
+                        <div class="documents-list">
+                            <div class="document-item">
+                                <i class="fas fa-file-pdf"></i>
+                                <div>
+                                    <h4>Guia Educativo - Conservação da Água</h4>
+                                    <p>Material completo sobre preservação de recursos hídricos</p>
+                                </div>
+                                <button class="download-btn">
+                                    <i class="fas fa-download"></i>
+                                </button>
+                            </div>
+                            <div class="document-item">
+                                <i class="fas fa-file-pdf"></i>
+                                <div>
+                                    <h4>Manual do Professor - PureDrop</h4>
+                                    <p>Orientações pedagógicas para uso do jogo em sala de aula</p>
+                                </div>
+                                <button class="download-btn">
+                                    <i class="fas fa-download"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Enhanced News Section -->
+        <section id="news" class="section">
+            <div class="container">
+                <h2 class="section-title" data-translate="news-title">Notícias e Atualizações do Projeto</h2>
+                
+                <div class="news-grid">
+                    <article class="news-card">
+                        <div class="news-date">15 Jul 2025</div>
+                        <h3 data-translate="news-1-title">Lançamento Oficial do PureDrop</h3>
+                        <p data-translate="news-1-content">O jogo educacional PureDrop está oficialmente disponível para download gratuito nas plataformas PC e Android, alcançando milhares de jovens pelo Brasil.</p>
+                        <button class="read-more-btn" data-translate="read-more">Ler Matéria Completa</button>
+                    </article>
+                    
+                    <article class="news-card">
+                        <div class="news-date">20 Ago 2025</div>
+                        <h3 data-translate="news-2-title">Mega Evento em Cuiabá/MT</h3>
+                        <p data-translate="news-2-content">Grande festival de conscientização ambiental realizado em Cuiabá reuniu mais de 500 jovens guardiãs, estabelecendo novo recorde de participação.</p>
+                        <button class="read-more-btn" data-translate="read-more">Ver Galeria do Evento</button>
+                    </article>
+                    
+                    <article class="news-card">
+                        <div class="news-date">10 Set 2025</div>
+                        <h3 data-translate="news-3-title">Expansão Nacional do Projeto</h3>
+                        <p data-translate="news-3-content">O projeto Guardiãs das Águas será expandido para mais 5 estados brasileiros, multiplicando o impacto educacional e ambiental.</p>
+                        <button class="read-more-btn" data-translate="read-more">Saiba Mais</button>
+                    </article>
+                    
+                    <article class="news-card">
+                        <div class="news-date">05 Out 2025</div>
+                        <h3 data-translate="news-4-title">Prêmio de Inovação Educacional</h3>
+                        <p data-translate="news-4-content">PureDrop recebe reconhecimento nacional como melhor projeto de gamificação educacional para consciência ambiental.</p>
+                        <button class="read-more-btn" data-translate="read-more">Ver Premiação</button>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Enhanced Contact Section -->
+        <section id="contact" class="section">
+            <div class="container">
+                <h2 class="section-title" data-translate="contact-title">Contato e Denúncias Ambientais</h2>
+                
+                <div class="contact-grid">
+                    <div class="contact-card">
+                        <div class="card-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h3 data-translate="contact-us-title">Entre em Contato Conosco</h3>
+                        <p data-translate="contact-us-text">Tem dúvidas sobre o projeto? Quer participar como voluntária? Quer implementar em sua escola? Entre em contato conosco!</p>
+                        <button class="btn btn-primary contact-btn">
+                            <i class="fas fa-paper-plane"></i>
+                            <span data-translate="contact-button">Enviar Mensagem</span>
+                        </button>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <div class="card-icon">
+                            <i class="fas fa-exclamation-triangle"></i>
+                        </div>
+                        <h3 data-translate="report-title">Denúncias Ambientais</h3>
+                        <p data-translate="report-text">Presenciou poluição hídrica? Denuncie aos órgãos competentes e ajude a proteger nossos recursos!</p>
+                        <div class="report-contacts">
+                            <div class="report-item">
+                                <i class="fas fa-phone"></i>
+                                <span>IBAMA: 0800 61 8080</span>
+                            </div>
+                            <div class="report-item">
+                                <i class="fas fa-phone"></i>
+                                <span>SOS Mata Atlântica: 0800 113 000</span>
+                            </div>
+                            <div class="report-item">
+                                <i class="fas fa-phone"></i>
+                                <span>Linha Verde IBAMA: linha.verde@ibama.gov.br</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="social-links">
+                    <h3 data-translate="follow-us">Acompanhe Nossas Redes Sociais</h3>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon" title="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-icon" title="Facebook">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" class="social-icon" title="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-icon" title="YouTube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="#" class="social-icon" title="TikTok">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Enhanced Game Modal -->
+    <div class="modal" id="gameModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 data-translate="modal-title">PureDrop: O Desafio da Gota Salva-Vidas</h3>
+                <button class="close-btn" id="closeModal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="loading-animation">
+                    <div class="loading-drop"></div>
+                    <div class="loading-text">
+                        <span data-translate="loading-text">🎮 Iniciando PureDrop: O Desafio da Gota Salva-Vidas...</span>
+                        <br><br>
+                        <span data-translate="preparing-text">⚡ Preparando sua aventura de conservação!</span>
+                        <br><br>
+                        <span data-translate="ready-text">💧 Seja bem-vinda, Guardiã das Águas!</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
